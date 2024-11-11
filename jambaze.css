@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 12px 100px;
+    gap: 32px;
+    width: 100%;
+    height: 102px;
+    background: #121212;
+    backdrop-filter: blur(32px);
+    font-family: 'grotesk' sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.jambaze-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: hsl(285, 22%, 52%);
+    color: #222;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 8px 15px;
+    display: block;
+    color: #fff;
+}
+
+.dropdown-menu li a:hover {
+    background-color: hsl(37, 22%, 53%);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown > a::after {
+    content: "▼"; /* Unicode for a downward arrow */
+    font-size: 0.8em;
+    color: #fff;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* For rotating effect on hover */
+}
+
+.fa-magnifying-glass {
+    color: white;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.subscribe-button{
+    background-color: #121212;
+    color: #fff;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+.subscribe-button,.fa-magnifying-glass{
+    margin-left: 20px;
+    align-self: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.featured {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.featured-image {
+    position: relative;
+    flex: 3;
+}
+
+.featured-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.featured-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.featured-text .tag {
+    background-color: #ff4747;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+
+.sidebar {
+    flex: 1;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar img {
+    width: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.sidebar div p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.sidebar div span {
+    font-size: 0.8em;
+    color: #999;
+}
